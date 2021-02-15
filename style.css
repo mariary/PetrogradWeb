@@ -1,0 +1,225 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url("content/Gilroy/Gilroy-Medium/Gilroy-Medium.ttf");
+}
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1.5em;
+    font-family: 'Gilroy';
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: #b7c0ff;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 7px;
+    font-size: 20px;
+}
+.header__menu{
+    display: flex;
+}
+.header__title{
+    overflow: hidden;
+    animation: text 500ms linear;
+}
+.header__menu_item{
+    margin: 10px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.content__background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+.content__background_rect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.content__background_circle{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    animation: circle 10s linear;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+.content__background_circle_light{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    animation: circle1 10s linear;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+.content__background_2_circle{
+    position: absolute;
+    left: -10%;
+    top: 40%;
+    animation: circle2 10s linear;
+    animation-fill-mode: forwards;
+    transform: scale(35);
+}
+.content__background_2_circle_light{
+    position: absolute;
+    left: -10%;
+    top: 40%;
+    animation: circle3 10s linear;
+    animation-fill-mode: forwards;
+    transform: scale(45);
+}
+.content__background_video{
+    position: absolute;
+    height: 100%;
+    left: 100%;
+    animation: video 10s linear;
+    animation-fill-mode: forwards;
+}
+.content__background_img_wrapper{
+    position: absolute;
+    z-index: 100;
+    left: 32vw;
+    top: 15vh;
+    width: 500px;
+    transform: scale(0);
+    animation: img 10s linear;
+    animation-fill-mode: forwards;
+}
+
+.content__first{
+    margin: 25vh 0 0 100px;
+}
+.content__first_title{
+    color: #ffffff;
+    font-size: 65px;
+    width: 300px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    animation: text2 500ms linear;
+    overflow: hidden;
+}
+
+.content__second{
+    display: none;
+}
+.btn {
+    outline: none;
+    background: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 18px 70px ;
+    font-size: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.content__first_btn{
+    transform: scale(1);
+    animation: btn 500ms linear;
+}
+ @keyframes text {
+     from{
+         width: 0;
+     }
+     to {
+         width: 80px;
+     }
+ }
+@keyframes text2 {
+    from{
+        width: 0;
+    }
+    to {
+        width: 300px;
+    }
+}
+@keyframes btn {
+    from{
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes circle {
+    0% {
+        transform: scale(0);
+    }
+    10% {
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(35);
+    }
+    70% {
+        transform: scale(35);
+    }
+    80% {
+        transform: scale(100);
+    }
+    100% {
+        transform: scale(100);
+    }
+}
+@keyframes circle1 {
+    0% {
+        transform: scale(0);
+    }
+    13% {
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(45);
+    }
+    70% {
+        transform: scale(45);
+    }
+}
+@keyframes img {
+    0%{
+        transform: scale(0);
+    }
+    15%{
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+@keyframes video {
+    0%{
+        left: 100%;
+    }
+    10% {
+        left: 100%;
+    }
+    20% {
+        left: 48%;
+    }
+    100% {
+        left: 48%;
+    }
+}
